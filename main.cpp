@@ -10,7 +10,7 @@ void hitungDiskonIteratif(Pelanggan pelangganList[], int jumlahPelanggan) {
     cout << "Daftar pelanggan yang mendapatkan diskon:\n";
     for (int i = 0; i < jumlahPelanggan; ++i) {
         if (pelangganList[i].totalBelanja > 100000) {
-            double totalSetelahDiskon = pelangganList[i].totalBelanja * 0.90;
+            double totalSetelahDiskon = (pelangganList[i].totalBelanja * 10)/100;
             cout << pelangganList[i].nama << " - Total setelah diskon: Rp " << totalSetelahDiskon << endl;
         }
     }
@@ -22,7 +22,7 @@ void hitungDiskonRekursif(Pelanggan pelangganList[], int jumlahPelanggan, int in
     }
 
     if (pelangganList[index].totalBelanja > 100000) {
-        double totalSetelahDiskon = pelangganList[i].totalBelanja * 0.90;
+        double totalSetelahDiskon = (pelangganList[index].totalBelanja * 10)/100;  // Use 'index' instead of 'i'
         cout << pelangganList[index].nama << " - Total setelah diskon: Rp " << totalSetelahDiskon << endl;
     }
 
@@ -49,4 +49,3 @@ int main() {
 
     return 0;
 }
-
